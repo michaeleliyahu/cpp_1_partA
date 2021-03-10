@@ -97,20 +97,7 @@ TEST_CASE("Good snowman code: check torso and base")
     CHECK(snowman(31114413) == string("  _   /_\\\n(.,.)\n( : )\n(___)"));
     CHECK(snowman(31114413) == string("  _   /_\\\n(.,.)\n( : )\n(   )"));
 }
-TEST_CASE("Good snowmanup code:")
-{
-    CHECK(snowmanUp(1222) == string("     \n _===_\n\\(o.o)/\n"));
-    CHECK(snowmanDown(2212) == string(" ( : )\n (" ")"));
 
-    CHECK(snowmanUp(1111) == string("     \n _===_\n (.,.)\n"));
-    CHECK(snowmanDown(3311) == string("/( : )\\\n ( : )"));
-
-    CHECK(snowmanUp(1111) == string("     \n _===_\n (.,.)/\n"));
-    CHECK(snowmanDown(1211) == string("<( : )\n ( : )"));
-
-    CHECK(snowmanUp(1222) == string("     \n _===_\n (o.o)\n"));
-    CHECK(snowmanDown(3312) == string("/( : )\\n (" ")"));
-}
 TEST_CASE("Bad snowman code: check length")
 {
     //more then 8 number
