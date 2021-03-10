@@ -37,7 +37,7 @@ namespace ariel
 		int down ;
 		string output = snowmanUp(up) + snowmanDown(down);
 
-		string c = "_===_\n(.,.)\n( : )\n( : )";
+		string c = "     \n_===_\n(.,.)\n( : )\n( : )";
 		return c;
 	}
 }

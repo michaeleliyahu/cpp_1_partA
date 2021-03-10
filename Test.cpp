@@ -19,9 +19,9 @@ _===_
 ( : )
 ( : )
 */
-    CHECK(snowman(21114411) == string(" ___ .....\n(.,.)\n( : )\n( : )"));
-    CHECK(snowman(31114411) == string("  _   /_\\\n(.,.)\n( : )\n( : )"));
-    CHECK(snowman(21114411) == string(" ___ (_*_)\n(.,.)\n( : )\n( : )"));
+    CHECK(snowman(21114411) == string("  ___\n .....\n (.,.)\n ( : )\n ( : )"));
+    CHECK(snowman(31114411) == string("   _\n  /_\\\n (.,.)\n ( : )\n ( : )"));
+    CHECK(snowman(21114411) == string("  ___\n (_*_)\n (.,.)\n ( : )\n ( : )"));
 }
 
 //check all option for arms
@@ -41,9 +41,9 @@ TEST_CASE("Good snowman code: check arms")
      (" ")
     */
     CHECK(snowman(12222212) == string("     \n _===_\n\\(o.o)/\n ( : )\n (" ")"));
-    CHECK(snowman(11113311) == string("     \n _===_\n (.,.)\n/( : )\\n ( : )"));
+    CHECK(snowman(11113311) == string("     \n _===_\n (.,.)\n/( : )\\\n ( : )"));
     CHECK(snowman(11111211) == string("     \n _===_\n (.,.)/\n<( : )\n ( : )")); //good exemple 
-    CHECK(snowman(12223312) == string("     \n _===_\n (o.o)\n/( : )\\n (" ")"));
+    CHECK(snowman(12223312) == string("     \n _===_\n (o.o)\n/( : )\\\n (" ")"));
     
     /*
       ___\n
@@ -53,9 +53,9 @@ TEST_CASE("Good snowman code: check arms")
      (" ")\n
     */
     CHECK(snowman(22222212) == string("  ___\n .....\n\\(o.o)/\n ( : )\n (" ")"));
-    CHECK(snowman(21113311) == string("  ___\n .....\n (.,.)\n/( : )\\n ( : )"));
+    CHECK(snowman(21113311) == string("  ___\n .....\n (.,.)\n/( : )\\\n ( : )"));
     CHECK(snowman(21111211) == string("  ___\n .....\n (.,.)\n<( : )>\n ( : )")); 
-    CHECK(snowman(22223312) == string("  ___\n .....\n (o.o)\n/( : )\\n (" ")"));
+    CHECK(snowman(22223312) == string("  ___\n .....\n (o.o)\n/( : )\\\n (" ")"));
 
     /*
        _\n
@@ -64,10 +64,10 @@ TEST_CASE("Good snowman code: check arms")
     <( : )\n
      ( : )
     */
-    CHECK(snowman(32222212) == string("   _\n  /_\\n\\(o.o)/\n ( : )\n (" ")"));
-    CHECK(snowman(31113311) == string("   _\n  /_\\\n (.,.)\n/( : )\\n ( : )"));
+    CHECK(snowman(32222212) == string("   _\n  /_\\\n\\(o.o)/\n ( : )\n (" ")"));
+    CHECK(snowman(31113311) == string("   _\n  /_\\\n (.,.)\n/( : )\\\n ( : )"));
     CHECK(snowman(31111211) == string("   _\n  /_\\\n (.,.)\n<( : )\n ( : )")); 
-    CHECK(snowman(32223312) == string("   _\n  /_\\\n (o.o)\n/( : )\\n (" ")"));
+    CHECK(snowman(32223312) == string("   _\n  /_\\\n (o.o)\n/( : )\\\n (" ")"));
 
     /*
       ___\n
@@ -77,25 +77,25 @@ TEST_CASE("Good snowman code: check arms")
      ( : ) 
     */
     CHECK(snowman(42222212) == string("  ___\n (_*_)\n\\(o.o)/\n ( : )\n ( : )"));
-    CHECK(snowman(41113311) == string("  ___\n (_*_)\n (.,.)\n/( : )\\n ( : )"));
+    CHECK(snowman(41113311) == string("  ___\n (_*_)\n (.,.)\n/( : )\\\n ( : )"));
     CHECK(snowman(41111211) == string("  ___\n (_*_)\n (.,.)\n<( : )>\n ( : )")); 
-    CHECK(snowman(42223312) == string("  ___\n (_*_)\n (o.o)\n/( : )\\n (" ")"));
+    CHECK(snowman(42223312) == string("  ___\n (_*_)\n (o.o)\n/( : )\\\n (" ")"));
 }
 TEST_CASE("Good snowman code: check torso and base")
 {
-    CHECK(snowman(11114421) == string("     \n_===_\n(.,.)\n(] [)\n( : )"));
-    CHECK(snowman(11114422) == string("     \n_===_\n(.,.)\n(] [)\n(" ")"));
-    CHECK(snowman(11114423) == string("     \n_===_\n(.,.)\n(] [)\n(___)"));
-    CHECK(snowman(11114424) == string("     \n_===_\n(.,.)\n(] [)\n(  )"));
+    CHECK(snowman(11114421) == string("     \n _===_\n (.,.)\n (] [)\n ( : )"));
+    CHECK(snowman(11114422) == string("     \n _===_\n (.,.)\n (] [)\n (" ")"));
+    CHECK(snowman(11114423) == string("     \n _===_\n (.,.)\n (] [)\n (___)"));
+    CHECK(snowman(11114424) == string("     \n _===_\n (.,.)\n (] [)\n (  )"));
 
-    CHECK(snowman(21114431) == string(" ___ .....\n(.,.)\n(> <)\n( : )"));
-    CHECK(snowman(21114432) == string(" ___ .....\n(.,.)\n(> <)\n(" ")"));
-    CHECK(snowman(21114433) == string(" ___ .....\n(.,.)\n(> <)\n(___)"));
-    CHECK(snowman(21114434) == string(" ___ .....\n(.,.)\n(> <)\n(   )"));
+    CHECK(snowman(21114431) == string("  ___\n .....\n (.,.)\n (> <)\n ( : )"));
+    CHECK(snowman(21114432) == string("  ___\n .....\n (.,.)\n (> <)\n (" ")"));
+    CHECK(snowman(21114433) == string("  ___\n .....\n (.,.)\n (> <)\n (___)"));
+    CHECK(snowman(21114434) == string("  ___\n .....\n (.,.)\n (> <)\n (   )"));
     
-    CHECK(snowman(31114412) == string("  _   /_\\\n(.,.)\n( : )\n(" ")"));
-    CHECK(snowman(31114413) == string("  _   /_\\\n(.,.)\n( : )\n(___)"));
-    CHECK(snowman(31114413) == string("  _   /_\\\n(.,.)\n( : )\n(   )"));
+    CHECK(snowman(31114412) == string("   _\n  /_\\\n (.,.)\n ( : )\n (" ")"));
+    CHECK(snowman(31114413) == string("   _\n  /_\\\n (.,.)\n ( : )\n (___)"));
+    CHECK(snowman(31114413) == string("   _\n  /_\\\n (.,.)\n ( : )\n (   )"));
 }
 
 TEST_CASE("Bad snowman code: check length")
@@ -111,7 +111,7 @@ TEST_CASE("Bad snowman code: check length")
     //null index
     int x;
     CHECK_THROWS(snowman(x));
-    /* Add more checks here */
+
 }
 
 TEST_CASE("Bad snowman code: check if number between 1-4")
@@ -129,5 +129,5 @@ TEST_CASE("Bad snowman code: check if number between 1-4")
     //check null index
     int x;
     CHECK_THROWS(snowman(x));
-    /* Add more checks here */
+ 
 }
